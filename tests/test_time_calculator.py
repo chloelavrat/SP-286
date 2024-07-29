@@ -1,7 +1,7 @@
 """Unittest for the module named time.calculator."""
 
 import unittest
-from SP286_LIB.time.calculator import add_time, subtract_time
+from APOLLO_LIBRARY.time.calculator import add_time, subtract_time
 
 
 class Test_TimeCalculator(unittest.TestCase):

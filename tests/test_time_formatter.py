@@ -1,7 +1,7 @@
 """Unittest for the module named time.formatter."""
 
 import unittest
-from SP286_LIB.time.formatter import format_time, format_duration
+from APOLLO_LIBRARY.time.formatter import format_time, format_duration
 
 
 class Test_TimeFormatter(unittest.TestCase):
