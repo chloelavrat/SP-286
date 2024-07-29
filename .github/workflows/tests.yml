@@ -9,7 +9,7 @@ on:
       - clavrat/sp-286-init
 
 jobs:
-  test-python-310:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,6 +25,10 @@ jobs:
       run: |
         pip install -r requirements.txt
 
+    - name: Install pytest
+      run: |
+        pip install pytest
+
     - name: Run unit tests
       run: |
-        pytest tests/ # Adjust this if you use a different testing tool or directory structure
+        pytest tests/ # Ensure this matches your directory structure
