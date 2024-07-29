@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "MY_LIBRARY"
 version = "1.0.0"
-description = "**my_pypi_package** is a Python template package with CI and pre-commit."
+description = "**SP-286** is a Python template package with CI and pre-commit."
 authors = ["FirstName LastName <FirstName.LastName@gmail.com>"]
 license = "Copyright (c) FirstName LastName 2023"
 readme = "README.md"

@@ -49,9 +49,11 @@ def increase_time(timestamp, years=0, months=0, days=0, hours=0, minutes=0, seco
     month_delta = datetime.timedelta(days=months * 30)
 
     # Aggregate all deltas to determine the final duration to add
-    total_delta = datetime.timedelta(
-        days=days, hours=hours, minutes=minutes, seconds=seconds
-    ) + year_delta + month_delta
+    total_delta = (
+        datetime.timedelta(days=days, hours=hours, minutes=minutes, seconds=seconds)
+        + year_delta
+        + month_delta
+    )
 
     new_timestamp = timestamp + total_delta
     return new_timestamp.isoformat()
@@ -89,9 +91,11 @@ def decrease_time(timestamp, years=0, months=0, days=0, hours=0, minutes=0, seco
     month_delta = datetime.timedelta(days=months * 30)
 
     # Aggregate all deltas to determine the final duration to subtract
-    total_delta = datetime.timedelta(
-        days=days, hours=hours, minutes=minutes, seconds=seconds
-    ) + year_delta + month_delta
+    total_delta = (
+        datetime.timedelta(days=days, hours=hours, minutes=minutes, seconds=seconds)
+        + year_delta
+        + month_delta
+    )
 
     new_timestamp = timestamp - total_delta
     return new_timestamp.isoformat()

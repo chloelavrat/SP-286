@@ -39,4 +39,3 @@ activate_virtual_env
 upgrade_pip
 install_dependencies
 display_completion
-

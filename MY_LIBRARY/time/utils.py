@@ -16,7 +16,7 @@ print(pretty_duration(12345))
 import datetime
 
 
-def pretty_time(timestamp, format_style='24h'):
+def pretty_time(timestamp, format_style="24h"):
     """
     Convert a timestamp into a user-friendly time string.
 
@@ -39,10 +39,10 @@ def pretty_time(timestamp, format_style='24h'):
     if isinstance(timestamp, str):
         timestamp = datetime.datetime.fromisoformat(timestamp)
 
-    if format_style == '12h':
-        return timestamp.strftime('%m/%d/%Y %I:%M %p')
-    elif format_style == '24h':
-        return timestamp.strftime('%m/%d/%Y %H:%M')
+    if format_style == "12h":
+        return timestamp.strftime("%m/%d/%Y %I:%M %p")
+    elif format_style == "24h":
+        return timestamp.strftime("%m/%d/%Y %H:%M")
     else:
         raise ValueError("Invalid format_style. Use '12h' or '24h'.")
 
@@ -75,4 +75,4 @@ def pretty_duration(total_seconds):
     if seconds > 0:
         duration_parts.append(f"{seconds} {'second' if seconds == 1 else 'seconds'}")
 
-    return ', '.join(duration_parts)
+    return ", ".join(duration_parts)

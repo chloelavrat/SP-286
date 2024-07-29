@@ -1,1 +1,1 @@
-"""My library"""
+"""My library."""

@@ -1,6 +1,7 @@
-import os
-import glob
 import argparse
+import glob
+import os
+
 
 def update_text_in_file(filepath, target_text, replacement_text):
     """
@@ -19,12 +20,12 @@ def update_text_in_file(filepath, target_text, replacement_text):
         >>> update_text_in_file("sample.txt", "hello", "world")
         This will replace "hello" with "world" in "sample.txt".
     """
-    with open(filepath, 'r', encoding='utf-8-sig') as file:
+    with open(filepath, "r", encoding="utf-8-sig") as file:
         data = file.read()
 
     updated_data = data.replace(target_text, replacement_text)
 
-    with open(filepath, 'w', encoding='utf-8') as file:
+    with open(filepath, "w", encoding="utf-8") as file:
         file.write(updated_data)
 
 
@@ -45,7 +46,7 @@ def modify_and_rename(directory_path, old_text, new_text):
         >>> modify_and_rename("workspace", "old_name", "new_name")
         This will update names and replace text from "old_name" to "new_name" in "workspace".
     """
-    all_paths = glob.glob(os.path.join(directory_path, '**'), recursive=True)
+    all_paths = glob.glob(os.path.join(directory_path, "**"), recursive=True)
 
     # Update text in .py and .md files
     for path in all_paths:
@@ -57,8 +58,7 @@ def modify_and_rename(directory_path, old_text, new_text):
     for path in all_paths:
         if "__pycache__" not in path and os.path.isdir(path):
             if os.path.basename(path) == old_text:
-                new_directory_path = os.path.join(
-                    os.path.dirname(path), new_text)
+                new_directory_path = os.path.join(os.path.dirname(path), new_text)
                 os.rename(path, new_directory_path)
 
     # Rename files
@@ -67,7 +67,8 @@ def modify_and_rename(directory_path, old_text, new_text):
             if old_text in os.path.basename(path):
                 new_file_path = os.path.join(
                     os.path.dirname(path),
-                    os.path.basename(path).replace(old_text, new_text))
+                    os.path.basename(path).replace(old_text, new_text),
+                )
                 os.rename(path, new_file_path)
 
 
@@ -87,16 +88,19 @@ def execute():
         ```python script.py -d /path/to/directory --old old_text --new new_text```
     """
     parser = argparse.ArgumentParser(
-        description="Perform text replacement and renaming operations.")
+        description="Perform text replacement and renaming operations."
+    )
     parser.add_argument(
-        "-d", "--directory", type=str, default=".",
-        help="Directory where operations will start")
+        "-d",
+        "--directory",
+        type=str,
+        default=".",
+        help="Directory where operations will start",
+    )
+    parser.add_argument("--old", type=str, required=True, help="Text to be replaced")
     parser.add_argument(
-        "--old", type=str, required=True,
-        help="Text to be replaced")
-    parser.add_argument(
-        "--new", type=str, required=True,
-        help="Text to replace the old text with")
+        "--new", type=str, required=True, help="Text to replace the old text with"
+    )
     arguments = parser.parse_args()
 
     modify_and_rename(arguments.directory, arguments.old, arguments.new)
