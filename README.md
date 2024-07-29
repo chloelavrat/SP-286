@@ -4,7 +4,7 @@
 ![Python Versions](https://img.shields.io/badge/python-3.6%2C%203.10-blue.svg)
 
 <div align="center">
-  <img src="https://images.unsplash.com/photo-1672740276184-74e76b16c0f8?q=80&w=3328&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Banner" style="border-radius: 15px; width: 100%; max-width: 800px; height: auto;">
+  <img src="https://images.unsplash.com/photo-1672740276184-74e76b16c0f8?q=80&w=3328&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Banner" style="border-radius: 17px; width: 100%; max-width: 800px; height: auto;">
 </div>
 
 <h3 align="center">
