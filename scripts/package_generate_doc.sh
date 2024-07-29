@@ -42,7 +42,7 @@ generate_docs() {
         --output-path="./docs/api-docs" \
         --overview-file="README.md" \
         --src-base-url="https://github.com/" \
-        MY_LIB > /dev/null
+        APOLLO_LIBRARY > /dev/null
 }
 
 # Main script execution

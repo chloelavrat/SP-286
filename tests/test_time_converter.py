@@ -1,7 +1,7 @@
 """Unittest for the module named time.converter."""
 
 import unittest
-from APOLLO_LIBRARY.time.converter import \
+from SP286_LIB.time.converter import \
     unix_to_iso, iso_to_datetime, datetime_to_unix
 
 
