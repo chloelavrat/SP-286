@@ -1,3 +1,35 @@
+"""
+Text Replacement and File Renaming Utility
+
+This Python script provides a command-line utility for performing text
+replacement within files and renaming files and directories based on specified 
+text. It is particularly useful for projects that require batch updating of 
+file content and names, such as refactoring codebases or updating documentation.
+
+Functionality:
+1. Replace specific text within files that have `.py` and `.md` extensions.
+2. Rename files and directories based on the specified old and new text.
+3. Traverse directories recursively to apply changes throughout a project.
+
+Main Functions:
+- `update_text_in_file(filepath, target_text, replacement_text)`: Updates 
+  all instances of a specified text within a file.
+- `modify_and_rename(directory_path, old_text, new_text)`: Recursively 
+  modifies file names and replaces text within files in a directory.
+- `execute()`: Parses command-line arguments and triggers the text replacement 
+  and renaming operations.
+
+Usage:
+- Basic usage: 
+    ```bash
+    python script.py --old old_text --new new_text
+    ```
+- Specify a starting directory:
+    ```bash
+    python script.py -d /path/to/directory --old old_text --new new_text
+    ```
+"""
+
 import argparse
 import glob
 import os
@@ -58,7 +90,8 @@ def modify_and_rename(directory_path, old_text, new_text):
     for path in all_paths:
         if "__pycache__" not in path and os.path.isdir(path):
             if os.path.basename(path) == old_text:
-                new_directory_path = os.path.join(os.path.dirname(path), new_text)
+                new_directory_path = os.path.join(
+                    os.path.dirname(path), new_text)
                 os.rename(path, new_directory_path)
 
     # Rename files
@@ -97,7 +130,8 @@ def execute():
         default=".",
         help="Directory where operations will start",
     )
-    parser.add_argument("--old", type=str, required=True, help="Text to be replaced")
+    parser.add_argument("--old", type=str, required=True,
+                        help="Text to be replaced")
     parser.add_argument(
         "--new", type=str, required=True, help="Text to replace the old text with"
     )
