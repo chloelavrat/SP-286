@@ -1,11 +1,12 @@
 name: CD
 
-on: [push]
-#  push:
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Matches version tags like v1.0.0
+
 #    branches:
 #      - main
-#    tags:
-#      - '*.*.*' # This will trigger on version tags like 1.0.0
 
 jobs:
   build_and_release:
@@ -31,11 +32,22 @@ jobs:
 
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v1
+        uses: actions/create-release@v1.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
         with:
-          tag_name: ${{ github.ref_name }}
-          release_name: Release ${{ github.ref_name }}
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
+
+      - name: Upload Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./dist/*
+          asset_name: package.zip
+          asset_content_type: application/zip
