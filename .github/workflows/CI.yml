@@ -3,7 +3,7 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  Tests:
+  tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,7 +28,7 @@ jobs:
         run: |
           python -m unittest discover -s tests
 
-  Linter:
+  linter:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -41,7 +41,7 @@ jobs:
           flake8 ./APOLLO_LIBRARY --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
           
-  documentation_coverage:
+  doc_coverage:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
