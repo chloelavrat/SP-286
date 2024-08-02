@@ -15,7 +15,7 @@
   <b><a href="#">Guidelines</a></b>
 </h3>
 
-<p align="center"><b>SP286_LIB</b> is a template PyPI package designed to provide all the necessary components for creating your own package. Follow the instructions below to utilize it effectively in your projects. Note that this package is a placeholder, featuring only three modules that manage sample timestamps.</p>
+<p align="center"><b>APOLLO_LIBRARY</b> is a template PyPI package designed to provide all the necessary components for creating your own package. Follow the instructions below to utilize it effectively in your projects. Note that this package is a placeholder, featuring only three modules that manage sample timestamps.</p>
 
 ## Table of Contents
 
@@ -33,11 +33,11 @@ This template includes several essential shell scripts in the `scripts` director
 
 1. **Change the Library Name:**
     ```bash
-    python ./scripts/rename_package.py --old SP286_LIB --new YourNewLibraryName
+    python ./scripts/rename_package.py --old APOLLO_LIBRARY --new YourNewLibraryName
     ```
     Example:
     ```bash
-    python ./scripts/rename_package.py --old SP286_LIB --new Artemis_program
+    python ./scripts/rename_package.py --old APOLLO_LIBRARY --new Artemis_program
     ```
 
 2. **Change the Library Version:**
@@ -54,7 +54,7 @@ This template includes several essential shell scripts in the `scripts` director
 
 4. **Develop Your Library:**
     
-    Place your code in the `SP286_LIB/` directory. Ensure that `__init__.py` files are present in each directory and subdirectory of the library.
+    Place your code in the `APOLLO_LIBRARY/` directory. Ensure that `__init__.py` files are present in each directory and subdirectory of the library.
 
 5. **Document Your Code:**
     
@@ -71,7 +71,7 @@ This template includes several essential shell scripts in the `scripts` director
 To utilize the placeholder functionality, you can import the provided modules and use them as follows:
 
 ```python
-from SP286_LIB.time.converter import unix_to_iso, iso_to_datetime
+from APOLLO_LIBRARY.time.converter import unix_to_iso, iso_to_datetime
 
 # Convert UNIX timestamp to ISO 8601 format
 timestamp = 1626797436
@@ -106,7 +106,7 @@ This will trigger the CI process to build and publish the package on PyPI.
 
 ## Placeholder Functionality
 
-The **SP286_LIB** template includes utility functions for handling time-related tasks, such as time conversion, calculations, and formatting. The `time_converter` module enables conversions between various time formats, including UNIX timestamps, ISO 8601, and Python datetime objects.
+The **APOLLO_LIBRARY** template includes utility functions for handling time-related tasks, such as time conversion, calculations, and formatting. The `time_converter` module enables conversions between various time formats, including UNIX timestamps, ISO 8601, and Python datetime objects.
 
 ## Acknowledgements
 

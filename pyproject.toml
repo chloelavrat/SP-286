@@ -1,14 +1,14 @@
 [tool.poetry]
-name = "SP286_LIB"
+name = "APOLLO_LIBRARY"
 version = "1.0.0"
-description = "**SP286_LIB** is a Python template package with CI and pre-commit."
+description = "**APOLLO_LIBRARY** is a Python template package with CI and pre-commit."
 authors = ["FirstName LastName <FirstName.LastName@gmail.com>"]
 license = "Copyright (c) FirstName LastName 2023"
 readme = "README.md"
-packages = [{include = "SP286_LIB"}]
+packages = [{include = "APOLLO_LIBRARY"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.8"
 pytest = "^6.2"
 numpy = "^1.21"
 
