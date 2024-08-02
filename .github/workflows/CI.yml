@@ -3,48 +3,29 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  checkout:
+  Install:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-  setup-python:
-    needs: checkout
-    runs-on: ubuntu-latest
-    steps:
       - name: Set up Python 
         uses: actions/setup-python@v4
         with:
           python-version: '3.8'
 
-  list-files:
-    needs: setup-python
-    runs-on: ubuntu-latest
-    steps:
-      - name: List files
-        run: ls -R  # Lists all files and directories recursively
-
-  install-dependencies:
-    needs: list-files
-    runs-on: ubuntu-latest
-    steps:
       - name: Install dependencies
         run: |
-          ls -l
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-  install-library:
-    needs: install-dependencies
-    runs-on: ubuntu-latest
-    steps:
       - name: Install the library
         run: |
           pip install .
 
-  lint:
-    needs: install-library
+  Lint:
+    needs: Install
     runs-on: ubuntu-latest
     steps:
       - name: Lint with flake8
@@ -52,20 +33,14 @@ jobs:
           pip install flake8
           flake8 ./APOLLO_LIBRARY --count --select=E9,F63,F7,F82 --show-source --statistics
           flake8 ./APOLLO_LIBRARY --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-
-  check-docs:
-    needs: install-library
-    runs-on: ubuntu-latest
-    steps:
+        
       - name: Check documentation coverage with pydocstyle
         run: |
           pip install pydocstyle
           pydocstyle .
 
-  test:
-    needs: install-library
-    runs-on: ubuntu-latest
-    steps:
       - name: Run tests
         run: |
           python -m unittest discover -s tests
+
+
