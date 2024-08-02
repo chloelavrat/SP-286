@@ -1,9 +1,3 @@
-# SP286 PyPI Template: A NASA Apollo Inspired Template
-
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-![Python Versions](https://img.shields.io/badge/python-3.6%2C%203.10-blue.svg)
-[![CI](https://github.com/chloelavrat/SP-286/actions/workflows/CI.yml/badge.svg)](https://github.com/chloelavrat/SP-286/actions/workflows/CI.yml)
-[![CD](https://github.com/chloelavrat/SP-286/actions/workflows/CD.yml/badge.svg)](https://github.com/chloelavrat/SP-286/actions/workflows/CD.yml)
 <div align="center">
   <img src="./docs/readme_banner.png" alt="Banner" style="border-radius: 17px; width: 100%; max-width: 800px; height: auto;">
 </div>
@@ -15,6 +9,20 @@
   •
   <b><a href="#">Guidelines</a></b>
 </h3>
+
+<div align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
+  </a>
+  <img src="https://img.shields.io/badge/python-3.6%2C%203.10-blue.svg" alt="Python Versions">
+  <a href="https://github.com/chloelavrat/SP-286/actions/workflows/CI.yml">
+    <img src="https://github.com/chloelavrat/SP-286/actions/workflows/CI.yml/badge.svg" alt="License">
+  </a>
+  <a href="https://github.com/chloelavrat/SP-286/actions/workflows/CD.yml">
+    <img src="https://github.com/chloelavrat/SP-286/actions/workflows/CD.yml/badge.svg" alt="License">
+  </a>
+</div>
+</br>
 
 <p align="center"><b>APOLLO_LIBRARY</b> is a template PyPI package designed to provide all the necessary components for creating your own package. Follow the instructions below to utilize it effectively in your projects. Note that this package is a placeholder, featuring only three modules that manage sample timestamps.</p>
 
