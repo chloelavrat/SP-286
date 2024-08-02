@@ -3,7 +3,7 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  Install:
+  Tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,23 +24,30 @@ jobs:
         run: |
           pip install .
 
-  Lint:
-    needs: Install
+      - name: Run tests
+        run: |
+          python -m unittest discover -s tests
+
+  Linter:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Lint with flake8
         run: |
           pip install flake8
           flake8 ./APOLLO_LIBRARY --count --select=E9,F63,F7,F82 --show-source --statistics
           flake8 ./APOLLO_LIBRARY --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-        
+
+          
+  documentation_coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: Check documentation coverage with pydocstyle
         run: |
           pip install pydocstyle
           pydocstyle .
-
-      - name: Run tests
-        run: |
-          python -m unittest discover -s tests
-
-
