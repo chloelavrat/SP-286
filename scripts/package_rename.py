@@ -1,5 +1,5 @@
 """
-Text Replacement and File Renaming Utility
+Text Replacement and File Renaming Utility.
 
 This Python script provides a command-line utility for performing text
 replacement within files and renaming files and directories based on specified 
