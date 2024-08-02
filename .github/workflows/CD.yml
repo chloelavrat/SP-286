@@ -2,11 +2,10 @@ name: CD
 
 on:
   push:
+    branches:
+      - main
     tags:
-      - '*.*.*'  # Matches version tags like v1.0.0
-
-#    branches:
-#      - main
+      - '*.*.*'  # Matches version tags like 1.0.0
 
 jobs:
   build_and_release:
