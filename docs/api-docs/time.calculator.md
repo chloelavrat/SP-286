@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-<a href="https://github.com/APOLLO_LIBRARY/time/calculator.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/velvet-compute/velvet-lib/blob/main/APOLLO_LIBRARY/time/calculator.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `time.calculator`
 calculator.py - A module for performing time-related calculations. 
@@ -19,7 +19,7 @@ print(subtract_time('2021-07-20T12:50:36', days=1))
 
 ---
 
-<a href="https://github.com/APOLLO_LIBRARY/time/calculator.py#L20"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/velvet-compute/velvet-lib/blob/main/APOLLO_LIBRARY/time/calculator.py#L20"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `add_time`
 
@@ -59,7 +59,7 @@ add_time('2021-07-20T12:50:36', hours=2, minutes=30)
 
 ---
 
-<a href="https://github.com/APOLLO_LIBRARY/time/calculator.py#L63"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/velvet-compute/velvet-lib/blob/main/APOLLO_LIBRARY/time/calculator.py#L64"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `subtract_time`
 

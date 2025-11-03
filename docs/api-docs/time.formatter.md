@@ -1,6 +1,6 @@
 <!-- markdownlint-disable -->
 
-<a href="https://github.com/APOLLO_LIBRARY/time/formatter.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/velvet-compute/velvet-lib/blob/main/APOLLO_LIBRARY/time/formatter.py#L0"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 # <kbd>module</kbd> `time.formatter`
 time_formatter.py - A module for formatting time in various ways. 
@@ -19,7 +19,7 @@ print(format_duration(seconds=12345))
 
 ---
 
-<a href="https://github.com/APOLLO_LIBRARY/time/formatter.py#L19"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/velvet-compute/velvet-lib/blob/main/APOLLO_LIBRARY/time/formatter.py#L19"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `format_time`
 
@@ -55,7 +55,7 @@ format_time('2021-07-20T15:20:36', time_format='12h')
 
 ---
 
-<a href="https://github.com/APOLLO_LIBRARY/time/formatter.py#L50"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+<a href="https://github.com/velvet-compute/velvet-lib/blob/main/APOLLO_LIBRARY/time/formatter.py#L50"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
 
 ## <kbd>function</kbd> `format_duration`
 
