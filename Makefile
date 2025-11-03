@@ -60,6 +60,7 @@ format: ## Perform codebase formatting
 
 fix: ## Fix QA mistakes
 	uv run ruff check --fix .
+	uv run ruff format
 
 fix-unsafe: ## Fix QA mistakes
 	uv run ruff check --fix --unsafe-fixes .

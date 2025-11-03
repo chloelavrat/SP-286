@@ -16,7 +16,7 @@ print(format_duration(seconds=12345))
 import datetime
 
 
-def format_time(timestamp, time_format='24h'):
+def format_time(timestamp, time_format="24h"):
     """
     Format a given timestamp in a human-readable way.
 
@@ -39,10 +39,10 @@ def format_time(timestamp, time_format='24h'):
     if isinstance(timestamp, str):
         timestamp = datetime.datetime.fromisoformat(timestamp)
 
-    if time_format == '12h':
-        return timestamp.strftime('%m/%d/%Y %I:%M %p')
-    elif time_format == '24h':
-        return timestamp.strftime('%m/%d/%Y %H:%M')
+    if time_format == "12h":
+        return timestamp.strftime("%m/%d/%Y %I:%M %p")
+    elif time_format == "24h":
+        return timestamp.strftime("%m/%d/%Y %H:%M")
     else:
         raise ValueError("Invalid time_format. Use '12h' or '24h'.")
 
@@ -69,13 +69,10 @@ def format_duration(seconds):
 
     formatted_duration = ""
     if hours > 0:
-        formatted_duration += \
-            f"{hours} {'hour' if hours == 1 else 'hours'}"
+        formatted_duration += f"{hours} {'hour' if hours == 1 else 'hours'}"
     if minutes > 0:
-        formatted_duration += \
-            f", {minutes} {'minute' if minutes == 1 else 'minutes'}"
+        formatted_duration += f", {minutes} {'minute' if minutes == 1 else 'minutes'}"
     if seconds > 0:
-        formatted_duration += \
-            f", {seconds} {'second' if seconds == 1 else 'seconds'}"
+        formatted_duration += f", {seconds} {'second' if seconds == 1 else 'seconds'}"
 
     return formatted_duration.lstrip(", ")
