@@ -1,3 +1,13 @@
+[project]
+name = "APOLLO_LIBRARY"
+version = "1.0.0"
+description = "**APOLLO_LIBRARY** is a Python template package with CI and pre-commit."
+authors = [
+    {name = "FirstName LastName", email = "FirstName.LastName@gmail.com"}
+]
+requires-python = ">=3.8,<3.13"
+readme = "README.md"
+
 [tool.poetry]
 name = "APOLLO_LIBRARY"
 version = "1.0.0"
@@ -8,12 +18,13 @@ readme = "README.md"
 packages = [{include = "APOLLO_LIBRARY"}]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.8,<3.13"
 pytest = "^6.2"
 numpy = "^1.21"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"  # Example development dependency
+lazydocs = "^0.4.8"  # For generating API documentation
 
 [tool.poetry.urls]
 homepage = "https://example.com"
