@@ -31,8 +31,8 @@ class Test_TimeCalculator(unittest.TestCase):
         - Adding minutes and seconds to the timestamp
         """
         self.assertEqual(
-            add_time('2021-07-20T12:50:36', hours=2, minutes=30),
-            '2021-07-20T15:20:36')
+            add_time("2021-07-20T12:50:36", hours=2, minutes=30), "2021-07-20T15:20:36"
+        )
 
     def test_subtract_time(self):
         """
@@ -46,9 +46,9 @@ class Test_TimeCalculator(unittest.TestCase):
         - Subtracting hours and minutes from the timestamp
         """
         self.assertEqual(
-            subtract_time('2021-07-20T12:50:36', days=1),
-            '2021-07-19T12:50:36')
+            subtract_time("2021-07-20T12:50:36", days=1), "2021-07-19T12:50:36"
+        )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

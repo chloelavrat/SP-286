@@ -17,8 +17,7 @@ print(subtract_time('2021-07-20T12:50:36', days=1))
 import datetime
 
 
-def add_time(timestamp, years=0, months=0,
-             days=0, hours=0, minutes=0, seconds=0):
+def add_time(timestamp, years=0, months=0, days=0, hours=0, minutes=0, seconds=0):
     """
     Add a specific duration to a given timestamp value.
 
@@ -52,16 +51,17 @@ def add_time(timestamp, years=0, months=0,
     months_delta = datetime.timedelta(days=months * 30)
 
     # Combine all deltas to get the final duration to add
-    delta = datetime.timedelta(
-        days=days, hours=hours, minutes=minutes, seconds=seconds
-    ) + years_delta + months_delta
+    delta = (
+        datetime.timedelta(days=days, hours=hours, minutes=minutes, seconds=seconds)
+        + years_delta
+        + months_delta
+    )
 
     new_timestamp = timestamp + delta
     return new_timestamp.isoformat()
 
 
-def subtract_time(timestamp, years=0, months=0,
-                  days=0, hours=0, minutes=0, seconds=0):
+def subtract_time(timestamp, years=0, months=0, days=0, hours=0, minutes=0, seconds=0):
     """
     Subtract a specific duration from a given timestamp.
 
@@ -95,9 +95,11 @@ def subtract_time(timestamp, years=0, months=0,
     months_delta = datetime.timedelta(days=months * 30)
 
     # Combine all deltas to get the final duration to subtract
-    delta = datetime.timedelta(
-        days=days, hours=hours, minutes=minutes, seconds=seconds
-    ) + years_delta + months_delta
+    delta = (
+        datetime.timedelta(days=days, hours=hours, minutes=minutes, seconds=seconds)
+        + years_delta
+        + months_delta
+    )
 
     new_timestamp = timestamp - delta
     return new_timestamp.isoformat()

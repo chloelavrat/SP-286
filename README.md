@@ -10,6 +10,7 @@
   <b><a href="#">Guidelines</a></b>
 </h3>
 
+
 <div align="center">
   <a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
@@ -38,42 +39,22 @@
 
 This template includes several essential shell scripts in the `scripts` directory to streamline the management and development of the library. Ensure Python is installed on your computer before proceeding.
 
-### Steps to Use the Template:
+## Getting started
 
-1. **Change the Library Name:**
-    ```bash
-    python ./scripts/rename_package.py --old APOLLO_LIBRARY --new YourNewLibraryName
-    ```
-    Example:
-    ```bash
-    python ./scripts/rename_package.py --old APOLLO_LIBRARY --new Artemis_program
-    ```
+```{bash}
+uv venv
+source .venv/bin/activate
 
-2. **Change the Library Version:**
-    ```bash
-    ./scripts/change_version.sh X.Y.Z
-    ```
-    For detailed versioning information, refer to the [Versioning](#versioning) section below.
+```
 
-3. **Create and Activate a Virtual Environment:**
-    ```bash
-    ./scripts/virtualenv_create.sh
-    source ./scripts/virtualenv_activate.sh
-    ```
+## Structure
 
-4. **Develop Your Library:**
-    
-    Place your code in the `APOLLO_LIBRARY/` directory. Ensure that `__init__.py` files are present in each directory and subdirectory of the library.
+```
+from velvetlib.mir.features import Mood ,Genre, BPM, Tonality, Genre
+from velvetlib.agent.musictopitch import MusicToPitch
 
-5. **Document Your Code:**
-    
-    Use the Google docstring format for all functions, classes, and files to ensure consistent and comprehensive documentation.
-
-6. **Generate the Documentation:**
-    ```bash
-    ./scripts/generate_doc.sh
-    ```
-    Documentation will be available in the `/docs/API/` directory.
+from CoreVelvet.utils import *
+```
 
 ## Usage
 

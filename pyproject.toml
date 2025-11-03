@@ -1,24 +1,25 @@
-[tool.poetry]
+[project]
 name = "APOLLO_LIBRARY"
 version = "1.0.0"
 description = "**APOLLO_LIBRARY** is a Python template package with CI and pre-commit."
-authors = ["FirstName LastName <FirstName.LastName@gmail.com>"]
-license = "Copyright (c) FirstName LastName 2023"
+authors = [
+    {name = "FirstName LastName", email = "FirstName.LastName@gmail.com"}
+]
+requires-python = ">=3.8,<3.13"
 readme = "README.md"
-packages = [{include = "APOLLO_LIBRARY"}]
+dependencies = [
+    "numpy>=1.21",
+]
 
-[tool.poetry.dependencies]
-python = "^3.8"
-pytest = "^6.2"
-numpy = "^1.21"
-
-[tool.poetry.dev-dependencies]
-pytest = "^6.2.5"  # Example development dependency
-
-[tool.poetry.urls]
-homepage = "https://example.com"
-repository = "https://github.com/yourusername/your-repo"
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.1.0",
+    "mypy>=1.0.0",
+    "pytest>=6.2",
+    "pydocstyle>=6.3.0",
+    "lazydocs>=0.4.8",
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
