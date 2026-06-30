@@ -47,15 +47,6 @@ source .venv/bin/activate
 
 ```
 
-## Structure
-
-```
-from velvetlib.mir.features import Mood ,Genre, BPM, Tonality, Genre
-from velvetlib.agent.musictopitch import MusicToPitch
-
-from CoreVelvet.utils import *
-```
-
 ## Usage
 
 To utilize the placeholder functionality, you can import the provided modules and use them as follows:
